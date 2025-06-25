@@ -52,5 +52,15 @@ function interruptorBotao() {
 // fazer login de fato.
 formulario.botaoLogin().addEventListener('click', function(e) {
     e.preventDefault()
-    alert('fez login!')
+    
+    mostrarCarregando()
+    firebase.auth().signInWithEmailAndPassword(formulario.email().value, formulario.senha().value)
+    .then(res => {
+        esconderCarregando()
+        window.location.href = '../pages/home.html'
+    }).catch(err => {
+        esconderCarregando()
+        esconderCarregando()
+        console.error("Erro ao logar:", err.message);
+    })
 })

@@ -13,28 +13,38 @@ const formulario = {
 }
 
 function validandoEmail() {
+    interruptorBotao()
     const email = formulario.email().value
+    const caixaErro = formulario.caixaErroEmail()
+    const mensagemErro = formulario.mensagemErroEmail()
 
-    if (email) {
-        esconderErro(formulario.caixaErroEmail())
-        if (validarEmail(email)) {
-            esconderErro(formulario.caixaErroEmail())
-            formulario.botaoRecuperar().disabled = !validarEmail(email) 
-        } else {
-            formulario.botaoRecuperar().disabled = !validarEmail(email) 
-            mostrarErro(formulario.caixaErroEmail(),formulario.mensagemErroEmail(), '"Email" não é válido')
-        }
-    } else {
-        formulario.botaoRecuperar().disabled = !validarEmail(email) 
-        mostrarErro(formulario.caixaErroEmail(), formulario.mensagemErroEmail(), '"Email" não pode estar vazio')
-    }
+    if (!email) return mostrarErro(caixaErro, mensagemErro, '"Email" não pode estar vazio')
+
+    if (!validarEmail(email)) return mostrarErro(caixaErro, mensagemErro, '"Email" é inválido')
+    
+    interruptorBotao()
+    esconderErro(caixaErro)
+}
+
+function interruptorBotao() {
+    const email = formulario.email().value
+    formulario.botaoRecuperar().disabled = !validarEmail(email)
 }
 
 // envia email de recuperacão
 formulario.botaoRecuperar().addEventListener('click', function(e) {
     e.preventDefault()
-    formulario.formEsqueci().style.display = 'none'
-    formulario.respostaEsqueci().style.display = 'flex'
+    mostrarCarregando()
+    firebase.auth().sendPasswordResetEmail(formulario.email().value)
+    .then(res => {
+        esconderCarregando()
+        formulario.formEsqueci().style.display = 'none'
+        formulario.respostaEsqueci().style.display = 'flex'
+    }).catch(err => {
+        esconderCarregando()
+        console.error("Erro ao enviar email:", err.message);
+    })
+
 })
 
 formulario.botaoVoltar().addEventListener('click', function() {

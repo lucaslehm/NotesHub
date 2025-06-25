@@ -170,5 +170,29 @@ function senhaValida(senha) {
 // registrar de fato!
 formulario.botaoRegistrar().addEventListener('click', function(e) {
     e.preventDefault()
-    alert('Criou conta!')
+    mostrarCarregando()
+
+    const nome = formulario.nome().value
+    const email = formulario.email().value
+    const senha = formulario.senha().value
+
+    firebase.auth().createUserWithEmailAndPassword(email, senha)
+        .then((userCredential) => {
+            const uid = userCredential.user.uid
+
+            return firebase.firestore().collection('usuarios').doc(uid).set({
+                nome: nome,
+                email: email,
+                criadoEm: firebase.firestore.FieldValue.serverTimestamp()
+            })
+        })
+        .then(() => {
+            alert('Usuario Registrado com sucesso!')
+            esconderCarregando()
+            window.location.href = '../pages/home.html'
+        })
+        .catch((err) => {
+            esconderCarregando()
+            console.error("Erro ao registrar:", err.message);
+        })
 })
