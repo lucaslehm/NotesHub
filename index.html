@@ -48,7 +48,7 @@
                 <label class="padrao-label" for="password">Senha</label>
                 <div class="input-caixa">
                     <input class="padrao-input" type="password" name="name__password" id="password" placeholder="Digite sua senha..." onchange="validandoSenha()">
-                    <i id="revelarSenhaBotao" class="ri-eye-line icone-input-padrao"></i>
+                    <i id="revelarSenhaBotao" class="ri-eye-line icone-input-padrao" onclick="revelarSenha('revelarSenhaBotao', 'password')"></i>
                 </div>
 
                 <div class="caixa-mensagem-de-erro" id="caixaErroSenha" style="display: none;">
@@ -66,6 +66,7 @@
 
         <p class="rodape-padrao-autenticacao">Não tem uma conta? <a class="link-rodape-padrao" href="pages/registro.html">Crie uma</a></p>
 
+        <script src="scripts/index.js"></script>
         <script src="scripts/login.js"></script>
 
     </main>

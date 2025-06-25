@@ -30,13 +30,13 @@
 
                 <label class="padrao-label" for="nome">Nome</label>
                 <div class="input-caixa">
-                    <input class="padrao-input" type="text" name="name__nome" id="nome"  placeholder="Digite seu nome...">
+                    <input class="padrao-input" type="text" name="name__nome" id="nome"  placeholder="Digite seu nome..." onchange="validandoNome()">
                     <i class="ri-user-line icone-input-padrao"></i>
                 </div>
 
-                <div class="caixa-mensagem-de-erro" id="caixaErroEmail" style="display: none;">
+                <div class="caixa-mensagem-de-erro" id="caixaErroNome" style="display: none;">
                     <i class="ri-error-warning-line"></i>
-                    <p class="mensagem-de-erro-padrao">erro placeholder</p>
+                    <p class="mensagem-de-erro-padrao" id="mensagemErroNome">erro placeholder</p>
                 </div>
 
             </div>
@@ -45,13 +45,13 @@
 
                 <label class="padrao-label" for="email">Email</label>
                 <div class="input-caixa">
-                    <input class="padrao-input" type="email" name="name__email" id="email"  placeholder="Digite seu email...">
+                    <input class="padrao-input" type="email" name="name__email" id="email"  placeholder="Digite seu email..." onchange="validandoEmail()">
                     <i class="ri-mail-line icone-input-padrao"></i>
                 </div>
 
                 <div class="caixa-mensagem-de-erro" id="caixaErroEmail" style="display: none;">
                     <i class="ri-error-warning-line"></i>
-                    <p class="mensagem-de-erro-padrao">erro placeholder</p>
+                    <p class="mensagem-de-erro-padrao" id="mensagemErroEmail">erro placeholder</p>
                 </div>
 
             </div>
@@ -60,18 +60,23 @@
 
                 <label class="padrao-label" for="password">Senha</label>
                 <div class="input-caixa">
-                    <input class="padrao-input" type="password" name="name__password" id="password" placeholder="Digite sua senha...">
-                    <i id="revelarSenhaBotao" class="ri-eye-line icone-input-padrao"></i>
+                    <input class="padrao-input" type="password" name="name__password" id="password" placeholder="Digite sua senha..." oninput="validandoSenha()" onblur="esconderValidacaoSenha()">
+                    <i id="revelarSenhaBotao" class="ri-eye-line icone-input-padrao" onclick="revelarSenha('revelarSenhaBotao', 'password')"></i>
+                </div>
+
+                <div class="caixa-mensagem-de-erro" id="caixaErroSenha" style="display: none;">
+                    <i class="ri-error-warning-line"></i>
+                    <p class="mensagem-de-erro-padrao" id="mensagemErroSenha">erro placeholder</p>
                 </div>
 
                 <div class="caixa-validacao-senha" id="caixaValidacaoSenha" style="display: none;">
                     <p class="titulo-criterio-senha">Senha deve conter:</p>
 
-                    <p class="criterio-senha criterio-nao-atendido"><i class="ri-close-line"></i> 1 letra mínuscula</p>
-                    <p class="criterio-senha criterio-nao-atendido"><i class="ri-close-line"></i> 1 letra maiuscula</p>
-                    <p class="criterio-senha criterio-nao-atendido"><i class="ri-close-line"></i> 1 número</p>
-                    <p class="criterio-senha criterio-nao-atendido"><i class="ri-close-line"></i> 1 caractere especial</p>
-                    <p class="criterio-senha criterio-nao-atendido"><i class="ri-close-line"></i> pelo menos 6 carácteres</p>
+                    <p id="criterioSenhaMinusculo" class="criterio-nao-atendido"><i id="iconeCriterioSenhaMinusculo" class="ri-close-line"></i> 1 letra mínuscula</p>
+                    <p id="criterioSenhaMaiusculo" class="criterio-nao-atendido"><i id="iconeCriterioSenhaMaiusculo" class="ri-close-line"></i> 1 letra maiuscula</p>
+                    <p id="criterioSenhaNumero" class="criterio-nao-atendido"><i id="iconeCriterioSenhaNumero" class="ri-close-line"></i> 1 número</p>
+                    <p id="criterioSenhaSimbolo" class="criterio-nao-atendido"><i id="iconeCriterioSenhaSimbolo" class="ri-close-line"></i> 1 caractere especial</p>
+                    <p id="criterioSenhaTamanho" class="criterio-nao-atendido"><i id="iconeCriterioSenhaTamanho" class="ri-close-line"></i> pelo menos 6 carácteres</p>
                 </div>
 
             </div>
@@ -80,13 +85,13 @@
 
                 <label class="padrao-label" for="confirmarPassword">Confirmar senha</label>
                 <div class="input-caixa">
-                    <input class="padrao-input" type="password" name="name__confirmarPassword" id="confirmarPassword" placeholder="Digite sua senha novamente...">
-                    <i id="revelarConfirmarSenhaBotao" class="ri-eye-line icone-input-padrao"></i>
+                    <input class="padrao-input" type="password" name="name__confirmarPassword" id="confirmarPassword" placeholder="Digite sua senha novamente..." onchange="validandoConfirmarSenha()">
+                    <i id="revelarConfirmarSenhaBotao" class="ri-eye-line icone-input-padrao" onclick="revelarSenha('revelarConfirmarSenhaBotao', 'confirmarPassword')"></i>
                 </div>
 
-                <div class="caixa-mensagem-de-erro" id="caixaErroSenha" style="display: none;">
+                <div class="caixa-mensagem-de-erro" id="caixaErroConfirmarSenha" style="display: none;">
                     <i class="ri-error-warning-line"></i>
-                    <p class="mensagem-de-erro-padrao">erro placeholder</p>
+                    <p class="mensagem-de-erro-padrao" id="mensagemErroConfirmarSenha">erro placeholder</p>
                 </div>
 
             </div>
@@ -98,6 +103,9 @@
         <p class="rodape-padrao-autenticacao">Já tem uma conta? <a class="link-rodape-padrao" href="../index.html">Faça Login</a></p>
 
     </main>
+
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/register.js"></script>
     
 </body>
 </html>

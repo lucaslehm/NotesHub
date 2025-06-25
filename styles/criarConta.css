@@ -25,3 +25,7 @@
 #registrarBotao {
     margin-top: 1em;
 }
+
+#revelarConfirmarSenhaBotao {
+    cursor: pointer;
+}

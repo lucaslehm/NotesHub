@@ -29,13 +29,13 @@
 
                 <label class="padrao-label" for="email">Email</label>
                 <div class="input-caixa">
-                    <input class="padrao-input" type="email" name="name__email" id="email"  placeholder="Digite seu email...">
+                    <input class="padrao-input" type="email" name="name__email" id="email"  placeholder="Digite seu email..." onchange="validandoEmail()">
                     <i class="ri-mail-line icone-input-padrao"></i>
                 </div>
 
                 <div class="caixa-mensagem-de-erro" id="caixaErroEmail" style="display: none;">
                     <i class="ri-error-warning-line"></i>
-                    <p class="mensagem-de-erro-padrao">erro placeholder</p>
+                    <p class="mensagem-de-erro-padrao" id="mensagemErroEmail">erro placeholder</p>
                 </div>
 
             </div>
@@ -51,9 +51,12 @@
                 <p class="mensagem-sucesso">Caso houver uma conta registrada com o email digitado, enviaremos um link de recuperação!</p>
             </div>
 
-            <button class="botao-padrao-autenticacao">Voltar</button>
+            <button class="botao-padrao-autenticacao" id="botaoVoltarRecuperacao">Voltar</button>
 
         </section>
+
+        <script src="../scripts/index.js"></script>
+        <script src="../scripts/recuperarSenha.js"></script>
 
     </main>
 </body>
