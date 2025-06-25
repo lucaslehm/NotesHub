@@ -1,0 +1,27 @@
+.caixa-validacao-senha {
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+    background-color: var(--verde-vivo);
+    color: var(--preto);
+    border-radius: .4em;
+    padding: .6em;
+    font-size: .8em;
+    font-weight: var(--medium);
+}
+
+.titulo-criterio-senha {
+    font-weight: var(--bold);
+}
+
+.criterio-nao-atendido {
+    color: red;
+}
+
+.criterio-atendido {
+    color: green;
+}
+
+#registrarBotao {
+    margin-top: 1em;
+}

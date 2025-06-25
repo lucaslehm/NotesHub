@@ -1,0 +1,153 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--preto);
+}
+
+
+
+.caixa-conteudo-padrao-autenticacao {
+    background-color: var(--limao);
+    padding: 2em 1em;
+    width: 320px;
+    border-radius: .6em;
+    box-shadow: 0px 3px 7px #00000034;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.area-introducao-padrao-autenticacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.logo-texto {
+    font-size: 2em;
+    font-weight: var(--extraBold);
+}
+
+.logo-destaque {
+    color: var(--verde);
+}
+
+.logo-simbolo {
+    color: var(--verde);
+    font-size: 2em;
+}
+
+.titulo-padrao-autenticacao,
+.descricao-padrao-autenticacao  {
+    text-align: center;
+}
+
+.titulo-padrao-autenticacao {
+    font-weight: var(--extraBold);
+    font-size: 1.3em;
+    margin-bottom: .7em;
+}
+
+.descricao-padrao-autenticacao {
+    font-weight: var(--medium);
+    font-size: .9em;
+    margin-bottom: 2em;
+}
+
+.formulario-padrao-autenticacao,
+.caixa-padrao-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.padrao-label {
+    font-weight: var(--semiBold);
+    font-size: .9em;
+}
+
+.input-caixa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: .5em;
+    border: solid 2px var(--uva);
+    padding: .6em;
+    border-radius: .6em;
+    margin-bottom: .5em;
+    background-color: var(--branco);
+}
+
+.padrao-input {
+    background-color: transparent;
+    width: 100%;
+    font-size: .9em;
+}
+
+.icone-input-padrao {
+    font-size: 1.1em;
+    font-weight: var(--bold);
+    color: var(--uva);
+}
+
+#revelarSenhaBotao {
+    cursor: pointer;
+}
+
+.botao-padrao-autenticacao[disabled],
+.botao-padrao-autenticacao[disabled]:hover {
+    background-color: #78866e;
+    cursor: default;
+}
+
+.botao-padrao-autenticacao {
+    background-color: var(--uva);
+    padding: .5em 0em;
+    font-size: 1em;
+    font-weight: var(--bold);
+    border-radius: .6em;
+    transition: all ease .2s;
+    cursor: pointer;
+}
+
+.botao-padrao-autenticacao:hover {
+    background-color: var(--uva-destaque);
+}
+
+.rodape-padrao-autenticacao {
+    margin-top: 3em;
+    font-weight: var(--medium);
+    font-size: .9em;
+}
+
+.link-rodape-padrao {
+    font-size: .9em;
+    font-weight: var(--semiBold);
+    text-align: right;
+    margin-bottom: 1.6em;
+    transition: all ease .2s;
+}
+
+.link-rodape-padrao:hover {
+    color: var(--uva);
+    text-decoration: underline;
+}
+
+.caixa-mensagem-de-erro {
+    display: flex;
+    gap: .2em;
+    align-items: center;
+    background-color: #d84f4fad;
+    color: var(--branco);
+    border-radius: .4em;
+    padding: 0em .3em;
+}

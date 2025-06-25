@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotesHub | Registrar</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/atenticacaoGlobal.css">
+    <link rel="stylesheet" href="../styles/criarConta.css">
+</head>
+<body>
+
+        <main class="caixa-conteudo-padrao-autenticacao">
+
+        <section class="area-introducao-padrao-autenticacao">
+
+            <div class="logo-area">
+                <i class="logo-simbolo ri-booklet-fill"></i><p class="logo-texto">Notes<span class="logo-destaque">Hub</span></p>
+            </div>
+
+            <h1 class="titulo-padrao-autenticacao">Criar Conta</h1>
+            <p class="descricao-padrao-autenticacao">Junte-se ao <strong>NotesHub</strong> e leve suas anotações para o próximo nível.</p>
+
+        </section>
+
+        <form action="/" class="formulario-padrao-autenticacao" id="registroForm">
+
+            <div class="caixa-padrao-input">
+
+                <label class="padrao-label" for="nome">Nome</label>
+                <div class="input-caixa">
+                    <input class="padrao-input" type="text" name="name__nome" id="nome"  placeholder="Digite seu nome...">
+                    <i class="ri-user-line icone-input-padrao"></i>
+                </div>
+
+                <div class="caixa-mensagem-de-erro" id="caixaErroEmail" style="display: none;">
+                    <i class="ri-error-warning-line"></i>
+                    <p class="mensagem-de-erro-padrao">erro placeholder</p>
+                </div>
+
+            </div>
+
+            <div class="caixa-padrao-input">
+
+                <label class="padrao-label" for="email">Email</label>
+                <div class="input-caixa">
+                    <input class="padrao-input" type="email" name="name__email" id="email"  placeholder="Digite seu email...">
+                    <i class="ri-mail-line icone-input-padrao"></i>
+                </div>
+
+                <div class="caixa-mensagem-de-erro" id="caixaErroEmail" style="display: none;">
+                    <i class="ri-error-warning-line"></i>
+                    <p class="mensagem-de-erro-padrao">erro placeholder</p>
+                </div>
+
+            </div>
+
+            <div class="caixa-padrao-input">
+
+                <label class="padrao-label" for="password">Senha</label>
+                <div class="input-caixa">
+                    <input class="padrao-input" type="password" name="name__password" id="password" placeholder="Digite sua senha...">
+                    <i id="revelarSenhaBotao" class="ri-eye-line icone-input-padrao"></i>
+                </div>
+
+                <div class="caixa-validacao-senha" id="caixaValidacaoSenha" style="display: none;">
+                    <p class="titulo-criterio-senha">Senha deve conter:</p>
+
+                    <p class="criterio-senha criterio-nao-atendido"><i class="ri-close-line"></i> 1 letra mínuscula</p>
+                    <p class="criterio-senha criterio-nao-atendido"><i class="ri-close-line"></i> 1 letra maiuscula</p>
+                    <p class="criterio-senha criterio-nao-atendido"><i class="ri-close-line"></i> 1 número</p>
+                    <p class="criterio-senha criterio-nao-atendido"><i class="ri-close-line"></i> 1 caractere especial</p>
+                    <p class="criterio-senha criterio-nao-atendido"><i class="ri-close-line"></i> pelo menos 6 carácteres</p>
+                </div>
+
+            </div>
+
+            <div class="caixa-padrao-input">
+
+                <label class="padrao-label" for="confirmarPassword">Confirmar senha</label>
+                <div class="input-caixa">
+                    <input class="padrao-input" type="password" name="name__confirmarPassword" id="confirmarPassword" placeholder="Digite sua senha novamente...">
+                    <i id="revelarConfirmarSenhaBotao" class="ri-eye-line icone-input-padrao"></i>
+                </div>
+
+                <div class="caixa-mensagem-de-erro" id="caixaErroSenha" style="display: none;">
+                    <i class="ri-error-warning-line"></i>
+                    <p class="mensagem-de-erro-padrao">erro placeholder</p>
+                </div>
+
+            </div>
+
+            <button type="submit" class="botao-padrao-autenticacao" id="registrarBotao" disabled>Criar conta</button>
+
+        </form>
+
+        <p class="rodape-padrao-autenticacao">Já tem uma conta? <a class="link-rodape-padrao" href="../index.html">Faça Login</a></p>
+
+    </main>
+    
+</body>
+</html>

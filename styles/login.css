@@ -1,0 +1,12 @@
+.esqueci-minha-senha-link {
+    font-size: .9em;
+    font-weight: var(--semiBold);
+    text-align: right;
+    margin-bottom: 1.6em;
+    transition: all ease .2s;
+}
+
+.esqueci-minha-senha-link:hover {
+    color: var(--uva);
+    text-decoration: underline;
+}

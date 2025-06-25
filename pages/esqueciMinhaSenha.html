@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotesHub | Resetar senha</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/atenticacaoGlobal.css">
+    <link rel="stylesheet" href="../styles/recuperarSenha.css">
+</head>
+<body>
+    <main class="caixa-conteudo-padrao-autenticacao">
+
+        <section class="area-introducao-padrao-autenticacao">
+
+            <div class="logo-area">
+                <i class="logo-simbolo ri-booklet-fill"></i><p class="logo-texto">Notes<span class="logo-destaque">Hub</span></p>
+            </div>
+
+            <h1 class="titulo-padrao-autenticacao">Recuperar senha</h1>
+            <p class="descricao-padrao-autenticacao">Esquecer é normal! Relaxa, te ajudamos a recuperar sua senha.</p>
+
+        </section>
+
+        <form action="/" class="formulario-padrao-autenticacao" id="esqueciMinhaSenhaForm">
+
+            <div class="caixa-padrao-input">
+
+                <label class="padrao-label" for="email">Email</label>
+                <div class="input-caixa">
+                    <input class="padrao-input" type="email" name="name__email" id="email"  placeholder="Digite seu email...">
+                    <i class="ri-mail-line icone-input-padrao"></i>
+                </div>
+
+                <div class="caixa-mensagem-de-erro" id="caixaErroEmail" style="display: none;">
+                    <i class="ri-error-warning-line"></i>
+                    <p class="mensagem-de-erro-padrao">erro placeholder</p>
+                </div>
+
+            </div>
+
+            <button type="submit" class="botao-padrao-autenticacao" id="enviarEmailRecuperacaoBtn" disabled>Enviar Email</button>
+
+        </form>
+
+        <section class="resposta-sucesso-conteudo" style="display: none;">
+
+            <div class="caixa-mensagem-sucesso">
+                <p class="sucesso-titulo">Sucesso!</p>
+                <p class="mensagem-sucesso">Caso houver uma conta registrada com o email digitado, enviaremos um link de recuperação!</p>
+            </div>
+
+            <button class="botao-padrao-autenticacao">Voltar</button>
+
+        </section>
+
+    </main>
+</body>
+</html>
