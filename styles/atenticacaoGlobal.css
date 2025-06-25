@@ -6,8 +6,6 @@ body {
     color: var(--preto);
 }
 
-
-
 .caixa-conteudo-padrao-autenticacao {
     background-color: var(--limao);
     padding: 2em 1em;
@@ -17,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all ease .3s;
 }
 
 .area-introducao-padrao-autenticacao {
@@ -46,7 +45,7 @@ body {
 }
 
 .titulo-padrao-autenticacao,
-.descricao-padrao-autenticacao  {
+.descricao-padrao-autenticacao {
     text-align: center;
 }
 
@@ -127,6 +126,7 @@ body {
     margin-top: 3em;
     font-weight: var(--medium);
     font-size: .9em;
+    text-align: center;
 }
 
 .link-rodape-padrao {
@@ -154,4 +154,20 @@ body {
 
 .mensagem-de-erro-padrao {
     font-size: .9em;
+}
+
+/* ===== APARELHOS Médios ===== */
+@media screen and (min-width: 768px) {
+    .caixa-conteudo-padrao-autenticacao {
+        padding: 2em 7em;
+        width: 700px;
+    }
+}
+
+/* ===== APARELHOS GRANDES ===== */
+@media screen and (min-width: 1024px) {
+    .caixa-conteudo-padrao-autenticacao {
+        padding: 2em 10em;
+        width: 900px;
+    }
 }

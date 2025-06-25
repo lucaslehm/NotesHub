@@ -10,3 +10,29 @@
     color: var(--uva);
     text-decoration: underline;
 }
+
+@media screen and (min-width: 1024px) {
+    .caixa-conteudo-padrao-autenticacao {
+        padding: 0px 0px;
+        width: 900px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .area-de-conteudo-login {
+        width: 450px;
+        padding: 2em;
+    }
+
+    .area-de-imagem-login {
+        display: flex;
+        width: 450px;
+        height: 570px;
+        background-color: transparent;
+        border-radius: .6em;
+        background-image: url(https://i.ibb.co/Y4MsX10z/notes-concept-illustration.png);
+        background-position: center;
+        background-size: cover;
+    }
+}
