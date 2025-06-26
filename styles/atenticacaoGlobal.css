@@ -24,26 +24,6 @@ body {
     align-items: center;
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    margin-bottom: 3em;
-}
-
-.logo-texto {
-    font-size: 2em;
-    font-weight: var(--extraBold);
-}
-
-.logo-destaque {
-    color: var(--verde);
-}
-
-.logo-simbolo {
-    color: var(--verde);
-    font-size: 2em;
-}
-
 .titulo-padrao-autenticacao,
 .descricao-padrao-autenticacao {
     text-align: center;

@@ -62,3 +62,31 @@ function revelarSenha(botao, input) {
         campoSenha.type = 'password'
     }
 }
+
+function ajustarPaddingConteudo() {
+    const conteudo = document.querySelector('.conteudo-principal');
+    const sidebar = document.querySelector('.barra-lateral');
+    const largura = window.innerWidth;
+
+    if (largura >= 1024) {
+        conteudo.style.paddingLeft = '266px';
+    } else if (largura >= 768 && largura < 1024) {
+        // Se barra lateral estiver aberta no mobile médio
+        conteudo.style.paddingLeft = sidebar.classList.contains('ativa') ? '80px' : '70px';
+    } else {
+        // Mobile pequeno
+        conteudo.style.paddingLeft = sidebar.classList.contains('ativa') ? '70px' : '1em';
+    }
+}
+
+document.getElementById('botaoMenuMobile').addEventListener('click', () => {
+    const sidebar = document.querySelector('.barra-lateral');
+    sidebar.classList.toggle('ativa');
+    ajustarPaddingConteudo();
+});
+
+// Recalcular sempre que a tela for redimensionada
+window.addEventListener('resize', ajustarPaddingConteudo);
+
+// Rodar no carregamento inicial
+window.addEventListener('DOMContentLoaded', ajustarPaddingConteudo);

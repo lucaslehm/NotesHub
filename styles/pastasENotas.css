@@ -1,0 +1,206 @@
+:root {
+    /* Cores das pastas */
+    --cor-pasta1: #9d9df0;
+    --cor-pasta2: #f09d9d;
+    --cor-pasta3: #f0ea9d;
+    --cor-pasta4: #f0c29d;
+    --cor-pasta5: #aef09d;
+    --cor-pasta6: #cf9df0;
+    --cor-pasta7: #968b89;
+    --cor-pasta8: #a8f1df;
+}
+
+
+.nota-padrao {
+    background-color: #e4e2d0;
+    width: 300px;
+    padding: 1.5em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.144);
+    gap: .5em;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.nota-padrao:hover {
+    transform: scale(103%, 103%);
+}
+
+.cabecalho-nota {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao-editar-nota {
+    cursor: pointer;
+    background-color: var(--preto);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .4em;
+    transition: all ease .2s;
+}
+
+.botao-editar-nota i {
+    color: var(--branco);
+}
+
+.botao-editar-nota:hover {
+    transform: scale(102%, 102%);
+}
+
+.titulos-nota {
+    display: flex;
+    flex-direction: column;
+}
+
+.nota-titulo {
+    font-weight: var(--semiBold);
+    font-size: 1.2em;
+}
+
+.pasta-categoria {
+    background-color: gray;
+    font-weight: var(--semiBold);
+    font-size: .7em;
+    border-radius: 1em;
+    padding: .4em .7em;
+    margin-top: .3em;
+}
+
+.data-criacao-nota,
+.ultima-modificacao-nota,
+.data-criacao-pasta {
+    font-weight: var(--semiBold);
+    font-size: .7em;
+    opacity: 0.5;
+}
+
+.divisor-nota {
+    background-color: var(--preto);
+    height: 2px;
+    width: 100%;
+    border-radius: 4px;
+    opacity: 0.3;
+    margin: .5em 0;
+}
+
+.nota-conteudo {
+    max-height: 160px;
+    overflow-y: scroll;
+}
+
+
+.nota-conteudo::-webkit-scrollbar {
+    display: none;
+}
+
+.texto-da-nota {
+    font-size: .9em;
+}
+
+/* Pastas */
+
+.pasta-padrao {
+    order: 1;
+    background-color: #a8f1df;
+    width: 190px;
+    height: 130px;
+    border-radius: .7em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.144);
+    transition: all ease .3s;
+}
+
+.cabecalho-pasta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ri-folder-6-fill {
+    font-size: 2.3em;
+    opacity: 0.6;
+}
+
+.nome-da-pasta {
+    margin-top: 1.3em;
+    font-weight: var(--semiBold);
+}
+
+#botaoMaisPasta {
+    padding: .3em;
+    border-radius: 50%;
+    transition: all ease .2s;
+    cursor: pointer;
+}
+
+#botaoMaisPasta:hover {
+    background-color: #0000001c;
+}
+
+@media screen and (max-width: 768px) {
+    .pasta-padrao {
+        width: 90px;
+        height: 90px;
+        border-radius: .4em;
+        padding: .5em;
+    }
+
+    .ri-folder-6-fill {
+        font-size: 1.7em;
+    }
+
+    .nome-da-pasta {
+        margin-top: .7em;
+        font-weight: var(--semiBold);
+        font-size: .9em;
+    }
+
+    .nota-padrao {
+        width: 250px;
+        padding: 1em;
+        border-radius: .6em;
+    }
+
+    .botao-editar-nota {
+        width: 25px;
+        height: 25px;
+    }
+
+    .botao-editar-nota i {
+        font-size: .8em;
+    }
+
+    .nota-titulo {
+        font-weight: var(--semiBold);
+        font-size: 1em;
+    }
+
+    .pasta-categoria {
+        font-size: .7em;
+        border-radius: 2em;
+        padding: .2em .5em;
+    }
+
+    .data-criacao-nota,
+    .ultima-modificacao-nota,
+    .data-criacao-pasta {
+        font-size: .6em;
+    }
+
+    .nota-conteudo {
+        max-height: 110px;
+    }
+
+    .texto-da-nota {
+        font-size: .8em;
+    }
+}

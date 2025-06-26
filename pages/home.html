@@ -7,15 +7,106 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/pastasENotas.css">
 </head>
 <body>
-    <h1>Olá Mundo!</h1>
+
+    <nav class="barra-lateral">
+
+        <div class="area-logo-barra-lateral">
+            <i  class="logo-simbolo ri-booklet-fill"></i>
+            <p class="logo-texto">NotesHub</p>
+        </div>
+
+        <ul class="menu-barra-lateral">
+            <li class="menu-item"><i class="icone menu ri-sticky-note-add-line"></i> <span class="menu-item-texto">Nova anotação</span></li>
+            <li class="menu-item"><i class="icone-menu ri-delete-bin-6-line"></i> <span class="menu-item-texto">Lixeira</span></li>
+            <li class="menu-item"><i class="icone-menu ri-settings-4-line"></i> <span class="menu-item-texto">Configurações</span></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo-principal">
+
+        <header class="cabecalho">
+            <i class="ri-menu-line" id="botaoMenuMobile"></i>
+            <div class="caixa-barra-de-pesquisa">
+                <i class="ri-search-line"></i>
+                <input type="search" name="nome__pesquisa" id="pesquisa" placeholder="Pesquisar notas...">
+            </div>
+            <div class="informacoes-cabecalho">
+
+                <i id="botaoSair" class="ri-logout-box-line"></i>
+
+                <div class="foto-de-perfil-cabecalho">
+
+                </div>
+                
+            </div>
+        </header>
+
+        <div class="boas-vindas">
+            <h1 class="cumprimento-home">Olá, <span id="nomeUsuario">Lucas!</span></h1>
+        </div>
+
+        <span class="home-divisor-hor"></span>
+
+        <h2 class="home-sub-titulo">Pastas</h2>
+
+        <div  class="pastas-conteudo">
+            
+            <div class="pasta-padrao">
+                <div class="cabecalho-pasta">
+                    <i class="ri-folder-6-fill"></i>
+                    <i id="botaoMaisPasta" class="ri-more-2-fill"></i>
+                </div>
+                <p class="nome-da-pasta">Pasta</p>
+                <p class="data-criacao-pasta">23/06/2025</p>
+            </div>
+
+            <div class="botao-home-padrao" id="botaoNovaPasta">
+                <i class="ri-folder-add-line"></i>
+                <span class="texto-do-botao">Nova Pasta</span>
+            </div>
+        </div>
+
+        <span class="home-divisor-hor"></span>
+
+        
+        <h2 class="home-sub-titulo">Minhas notas</h2>
+
+        <div class="notas-conteudo">
+
+            <div class="nota-padrao">
+                <div class="cabecalho-nota">
+                    <div class="titulos-nota">
+                        <h3 class="nota-titulo">Nota</h3>
+                        <p class="data-criacao-nota">23/06/2025</p>
+                        <p class="pasta-categoria"><i class="ri-folder-line"></i>  Nenhuma pasta</p>
+                    </div>
+                    <div class="botao-editar-nota">
+                        <i class="ri-edit-fill"></i>
+                    </div>
+                </div>
+                <span class="divisor-nota"></span>
+                <div class="nota-conteudo">
+                    <p class="texto-da-nota">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, placeat? Accusamus dolore repellat sequi minus ex sint placeat dolor. Dicta illum unde soluta sapiente voluptatibus ad quisquam asperiores accusamus libero!  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis unde sapiente, veniam reprehenderit eius ipsa adipisci hic ab quidem neque porro, placeat obcaecati voluptates? Eligendi nisi iste exercitationem tempore. Dolores!</p>
+                </div>
+                <p class="ultima-modificacao-nota">Modificado em 23/06/2025 às 19:00h</p>
+            </div>
+
+            <div class="botao-home-padrao" id="botaoNovaNota">
+                <i class="ri-sticky-note-add-line"></i>
+                <span class="texto-do-botao">Nova nota</span>
+            </div>
+        </div>
+
+    </main>
 
     <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore-compat.js"></script>
 
-    <script src="../scripts/guarda.js"></script>
     <script src="../scripts/index.js"></script>
+    <script src="../scripts/guarda.js"></script>
 </body>
 </html>

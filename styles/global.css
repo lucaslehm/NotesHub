@@ -49,6 +49,10 @@ a {
     color: var(--preto);
 }
 
+ul {
+    list-style: none;
+}
+
 .carregando {
     display: flex;
     align-items: center;
@@ -91,4 +95,25 @@ a {
         transform: translateY(30px);
         background-color: var(--branco);
     }
+}
+
+.logo-area,
+.area-logo-barra-lateral {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.logo-texto {
+    font-size: 2em;
+    font-weight: var(--extraBold);
+}
+
+.logo-destaque {
+    color: var(--verde);
+}
+
+.logo-simbolo {
+    color: var(--verde);
+    font-size: 2em;
 }
